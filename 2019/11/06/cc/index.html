@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="-网易云音乐 -Vue," />
 
 
 
@@ -81,15 +81,21 @@
 
 
 
+<meta name="description" content="这几天一直被网上的网易云音乐的API接口提供的登录注册接口所困扰，这个API接口确实不错，作者很用心而且这个不仅可以自己做本地接口还可以连接作者自己的在线接口。我的问题是我可以去请求接口然后返回数据，都可以得到我的登录的账号的数据，并且保存在本地localStorage    然后依据缓存的的账号去请求一些需要登录的接口数据，这个时候就会返回一个301的错误代码  这个问题我就一直无法解决，那个作">
+<meta name="keywords" content="-网易云音乐 -Vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="cc">
+<meta property="og:title" content="登录注册缓存问题">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;cc&#x2F;index.html">
 <meta property="og:site_name" content="Cobraの博客">
+<meta property="og:description" content="这几天一直被网上的网易云音乐的API接口提供的登录注册接口所困扰，这个API接口确实不错，作者很用心而且这个不仅可以自己做本地接口还可以连接作者自己的在线接口。我的问题是我可以去请求接口然后返回数据，都可以得到我的登录的账号的数据，并且保存在本地localStorage    然后依据缓存的的账号去请求一些需要登录的接口数据，这个时候就会返回一个301的错误代码  这个问题我就一直无法解决，那个作">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;cc&#x2F;c.jpg">
-<meta property="og:updated_time" content="2019-11-06T02:10:33.613Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;cc&#x2F;2.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;cc&#x2F;1.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;cc&#x2F;3.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;cc&#x2F;4.jpg">
+<meta property="og:updated_time" content="2019-11-12T14:10:36.749Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;cc&#x2F;c.jpg">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;cc&#x2F;2.jpg">
 
 
 
@@ -125,7 +131,7 @@
 
 
 
-  <title>cc | Cobraの博客</title>
+  <title>登录注册缓存问题 | Cobraの博客</title>
   
 
 
@@ -323,7 +329,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">cc</h1>
+          <h1 class="post-title" itemprop="name headline">登录注册缓存问题</h1>
         
 
         <div class="post-meta">
@@ -345,6 +351,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -379,7 +407,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0字
+                  250字
                 </span>
               
 
@@ -404,7 +432,15 @@
       
 
       
-        <p><img src="/2019/11/06/cc/c.jpg" alt="ssss"></p>
+        <p>这几天一直被网上的网易云音乐的<a href="https://binaryify.github.io/NeteaseCloudMusicApi/#/" target="_blank" rel="noopener">API接口</a>提供的登录注册接口所困扰，这个API接口确实不错，作者很用心而且这个不仅可以自己做本地接口还可以连接作者自己的在线接口。我的问题是我可以去请求接口然后返回数据，都可以得到我的登录的账号的数据，并且保存在本地localStorage </p>
+<img src="/2019/11/06/cc/2.jpg">
+
+<p>然后依据缓存的的账号去请求一些需要登录的接口数据，这个时候就会返回一个301的错误代码</p>
+<p><img src="/2019/11/06/cc/1.jpg" alt></p>
+<p>这个问题我就一直无法解决，那个作者给出的解决办法就是加个时间戳或者重启</p>
+<p><img src="/2019/11/06/cc/3.jpg" alt></p>
+<p>我试了很多次，还是报错，我的代码就此停止了下来，不知道去写啥了，其他的功能也都写的差不多了，唯独这个登录注册的缓存问题一直卡住，很难受。</p>
+<p><img src="/2019/11/06/cc/4.jpg" alt></p>
 
       
     </div>
@@ -430,6 +466,12 @@
 	
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90-Vue/" rel="tag"><i class="fa fa-tag"></i> -网易云音乐 -Vue</a>
+          
+        </div>
       
 
       
@@ -530,7 +572,25 @@
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
@@ -591,7 +651,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共77字</span>
+  <span class="post-count">博客全站共327字</span>
 </div>
 
 
