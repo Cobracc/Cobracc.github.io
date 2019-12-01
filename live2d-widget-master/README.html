@@ -1,4 +1,750 @@
-<!DOCTYPE html><html class="theme-next gemini use-motion" lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="theme-color" content="#222"><script src="/lib/pace/pace.min.js?v=1.0.2"></script><link href="/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css"><link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css"><link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4"><link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222"><meta name="keywords" content="Hexo, NexT"><meta name="description" content="Live2D Widget特性 Feature在网页中添加Live2D看板娘。与PJAX兼容，支持无刷新加载。Add Live2D widget to web page. Compatible with PJAX. 警告：不支持IE。WARNING: DO NOT SUPPORT IE. 示例 Demo在米米的博客的左下角可查看效果。需要使用支持WebGL的现代浏览器浏览。  这个仓库中也提供了两"><meta property="og:type" content="website"><meta property="og:title" content="Cobraの博客"><meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;live2d-widget-master&#x2F;README.html"><meta property="og:site_name" content="Cobraの博客"><meta property="og:description" content="Live2D Widget特性 Feature在网页中添加Live2D看板娘。与PJAX兼容，支持无刷新加载。Add Live2D widget to web page. Compatible with PJAX. 警告：不支持IE。WARNING: DO NOT SUPPORT IE. 示例 Demo在米米的博客的左下角可查看效果。需要使用支持WebGL的现代浏览器浏览。  这个仓库中也提供了两"><meta property="og:locale" content="zh-Hans"><meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;live2d-widget-master&#x2F;README.htm&#x2F;screenshot-1.png"><meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;live2d-widget-master&#x2F;README.htm&#x2F;screenshot-2.png"><meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;live2d-widget-master&#x2F;README.htm&#x2F;screenshot-3.png"><meta property="og:updated_time" content="2019-11-12T09:27:00.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;live2d-widget-master&#x2F;README.htm&#x2F;screenshot-1.png"><script type="text/javascript" id="hexo.configurations">var NexT=window.NexT||{},CONFIG={root:"/",scheme:"Gemini",version:"5.1.4",sidebar:{position:"left",display:"post",offset:12,b2t:!0,scrollpercent:!0,onmobile:!1},fancybox:!0,tabs:!0,motion:{enable:!0,async:!1,transition:{post_block:"fadeIn",post_header:"slideDownIn",post_body:"slideDownIn",coll_header:"slideLeftIn",sidebar:"slideUpIn"}},duoshuo:{userId:"0",author:"博主"},algolia:{applicationID:"",apiKey:"",indexName:"",hits:"",labels:""}}</script><link rel="canonical" href="http://yoursite.com/live2d-widget-master/README.html"><title> | Cobraの博客</title><script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"></head><body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans"><script src="https://cobracc.github.io/live2d/autoload.js"></script><div class="container sidebar-position-left page-post-detail"><div class="headband"></div><header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-wrapper"><div class="site-meta"><div class="custom-logo-site-title"><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span> <span class="site-title">Cobraの博客</span><span class="logo-line-after"><i></i></span></a></div><p class="site-subtitle">记录生活</p></div><div class="site-nav-toggle"> <button><span class="btn-bar"></span><span class="btn-bar"></span><span class="btn-bar"></span></button></div></div><nav class="site-nav"><ul id="menu" class="menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i><br> 首页</a></li><li class="menu-item menu-item-about"><a href="/about" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i><br> 关于</a></li><li class="menu-item menu-item-tags"><a href="/tags" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i><br> 标签</a></li><li class="menu-item menu-item-categories"><a href="/categories" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i><br> 分类</a></li><li class="menu-item menu-item-archive"><a href="/archive" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i><br> 归档</a></li><li class="menu-item menu-item-photos"><a href="/photos" rel="section"><i class="menu-item-icon fa fa-fw fa-image"></i><br> 相册</a></li><li class="menu-item menu-item-search"><a class="popup-trigger"><i class="menu-item-icon fa fa-search fa-fw"></i><br> 搜索</a></li></ul><div class="site-search"><div class="popup search-popup local-search-popup"><div class="local-search-header clearfix"><span class="search-icon"><i class="fa fa-search"></i></span><span class="popup-btn-close"><i class="fa fa-times-circle"></i></span><div class="local-search-input-wrapper"> <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input"></div></div><div id="local-search-result"></div></div></div></nav></div></header><main id="main" class="main"><div class="main-inner"><div class="content-wrap"><div id="content" class="content"><div id="posts" class="posts-expand"><div class="post-block page"><header class="post-header"><h1 class="post-title" itemprop="name headline"></h1></header><div class="post-body"><h1 id="Live2D-Widget"><a href="#Live2D-Widget" class="headerlink" title="Live2D Widget"></a>Live2D Widget</h1><h2 id="特性-Feature"><a href="#特性-Feature" class="headerlink" title="特性 Feature"></a>特性 Feature</h2><p>在网页中添加Live2D看板娘。与PJAX兼容，支持无刷新加载。<br>Add Live2D widget to web page. Compatible with PJAX.</p><p><strong>警告：不支持IE。</strong><br><strong>WARNING: DO NOT SUPPORT IE.</strong></p><h2 id="示例-Demo"><a href="#示例-Demo" class="headerlink" title="示例 Demo"></a>示例 Demo</h2><p>在<a href="https://zhangshuqiao.org" target="_blank" rel="noopener">米米的博客</a>的左下角可查看效果。需要使用支持WebGL的现代浏览器浏览。</p><p><img src="/live2d-widget-master/README.htm/screenshot-1.png" alt><br><img src="/live2d-widget-master/README.htm/screenshot-2.png" alt><br><img src="/live2d-widget-master/README.htm/screenshot-3.png" alt></p><p>这个仓库中也提供了两个Demo，即</p><ul><li><a href="https://mi.js.org/live2d-widget/demo/demo1.html" target="_blank" rel="noopener">demo1.html</a> ，展现基础效果</li><li><a href="https://mi.js.org/live2d-widget/demo/demo2.html" target="_blank" rel="noopener">demo2.html</a> ，仿NPM的登陆界面</li></ul><h2 id="依赖-Dependencies"><a href="#依赖-Dependencies" class="headerlink" title="依赖 Dependencies"></a>依赖 Dependencies</h2><p>本插件需要jQuery和font-awesome支持，请确保它们已在页面中加载，例如在<code>&lt;head&gt;</code>中加入：<br>jQuery and font-awesome is required for this plugin. You can add this to <code>&lt;head&gt;</code>:</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"</span>&gt;</span></span><br></pre></td></tr></table></figure><p>否则无法正常显示。（如果你的网页已经加载了jQuery，就不要重复加载了）</p><h2 id="使用-Usage"><a href="#使用-Usage" class="headerlink" title="使用 Usage"></a>使用 Usage</h2><p>你可以直接这样使用：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><p>将这一行代码加入<code>&lt;head&gt;</code>或<code>&lt;body&gt;</code>，即可看到效果。如果你的网站启用了PJAX，由于看板娘不必每页刷新，因此需要注意将相关脚本放到PJAX刷新区域之外。</p><p>换句话说，如果你是小白，或者只需要最基础的功能，就只需要：</p><ul><li>把这一行代码，连同前面的两行代码，一起放到html的<code>&lt;head&gt;</code>中即可；</li><li>如果页面是用各种模版引擎、php、asp生成的，也要自行修改，方法类似，只是可能略为麻烦。</li></ul><p><strong>但是！我们强烈推荐自己进行配置，否则很多功能是不完整的，并且可能产生问题！</strong><br>如果你有兴趣自己折腾的话，请看下面的详细说明。</p><h3 id="Using-CDN"><a href="#Using-CDN" class="headerlink" title="Using CDN"></a>Using CDN</h3><p>如果要自定义有关内容，可以把这个仓库Fork一份，然后进行修改。这时，使用方法对应地变为</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.jsdelivr.net/gh/username/live2d-widget/autoload.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><p>将<code>username</code>替换为你的GitHub用户名即可。</p><h3 id="Self-host"><a href="#Self-host" class="headerlink" title="Self-host"></a>Self-host</h3><p>你也可以直接把这些文件放到服务器上，而不是通过CDN加载。</p><ul><li>如果你可以通过ssh访问你的主机，请把整个项目克隆到服务器上。执行：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /path/to/your/webroot</span><br><span class="line"><span class="comment"># Clone this repository</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/stevenjoezhang/live2d-widget.git</span><br></pre></td></tr></table></figure></li><li>如果你的主机无法用ssh连接（例如一般的虚拟主机），请选择<code>Download ZIP</code>，然后通过ftp上传到主机上，再解压到网站的目录下。</li><li>如果你是通过Hexo等工具部署的静态博客，请选择<code>Download ZIP</code>，然后解压到本地的博客目录下，例如<code>source</code>下与<code>_posts</code>同级的目录。重新部署博客时，相关文件就会自动上传到对应的目录。（还需要在Hexo主题相关的swig或ejs模版中正确配置路径，才可以加载）</li></ul><p>这样，整个项目就可以通过你的服务器IP或者域名从公网访问了。你可以试试能否正常地通过浏览器打开<code>autoload.js</code>和<code>live2d.min.js</code>等文件。<strong>（最好还要确定一下这些文件的内容是正确的，有时由于字符集的问题，文件中可能出现乱码；此时需要重新下载）</strong><br>如果没有问题，接下来需要修改一些配置。（需要通过服务器上的<code>vim</code>，<code>emacs</code>，cPanel文件管理器等工具修改；你也可以先在本地完成这一步骤，再上传到服务器上）<br>修改<code>autoload.js</code>中的参数<code>live2d_path</code>为<code>live2d-widget</code>这一文件夹在公网上的路径。比如说，如果你可以通过</p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http<span class="variable">s:</span>//www.example.<span class="keyword">com</span>/path/<span class="keyword">to</span>/live2d-widget/live2d.<span class="built_in">min</span>.js</span><br></pre></td></tr></table></figure><p>访问到<code>live2d.min.js</code>，那么就把<code>live2d_path</code>的值修改为</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="regexp">//</span>www.example.com<span class="regexp">/path/</span>to<span class="regexp">/live2d-widget/</span></span><br></pre></td></tr></table></figure><p>路径末尾的<code>/</code>一定要加上。具体可以参考<code>autoload.js</code>内的注释。<br>完成后，在你要添加看板娘的界面加入</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://www.example.com/path/to/live2d-widget/autoload.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><p>就可以加载了。</p><h2 id="目录结构-Files"><a href="#目录结构-Files" class="headerlink" title="目录结构 Files"></a>目录结构 Files</h2><ul><li><code>waifu-tips.json</code>中包含了触发条件（<code>selector</code>，选择器）和触发时显示的文字（<code>text</code>）；</li><li><code>waifu.css</code>是看板娘的样式表。</li></ul><p>源文件是对Hexo的NexT主题有效的，为了适用于你自己的网页，可能需要自行修改，或增加新内容。<br><strong>警告：作者不对包括但不限于<code>waifu-tips.json</code>和<code>waifu-tips.js</code>文件中的内容负责，请自行确保它们是合适的。</strong></p><p>如果有任何疑问，欢迎提Issue。如果有任何修改建议，欢迎提PR。</p><h2 id="鸣谢-Credits"><a href="#鸣谢-Credits" class="headerlink" title="鸣谢 Credits"></a>鸣谢 Credits</h2><p>代码自这篇博文魔改而来：<br><a href="https://www.fghrsh.net/post/123.html" target="_blank" rel="noopener">https://www.fghrsh.net/post/123.html</a><br>相比初始的版本，这个仓库增加了一些功能，并优化了提示展现机制。</p><p>更多内容可以参考：<br><a href="https://zhangshuqiao.org/2018-07/在网页中添加Live2D看板娘/" target="_blank" rel="noopener">https://zhangshuqiao.org/2018-07/在网页中添加Live2D看板娘/</a><br><a href="https://imjad.cn/archives/lab/add-dynamic-poster-girl-with-live2d-to-your-blog-02" target="_blank" rel="noopener">https://imjad.cn/archives/lab/add-dynamic-poster-girl-with-live2d-to-your-blog-02</a><br><a href="https://github.com/summerscar/live2dDemo" target="_blank" rel="noopener">https://github.com/summerscar/live2dDemo</a></p><p>还可以自行搭建后端api，并增加模型（需要修改的内容比较多，此处不再赘述）：<br><a href="https://github.com/fghrsh/live2d_api" target="_blank" rel="noopener">https://github.com/fghrsh/live2d_api</a><br><a href="https://github.com/xiazeyu/live2d-widget-models" target="_blank" rel="noopener">https://github.com/xiazeyu/live2d-widget-models</a><br><a href="https://github.com/xiaoski/live2d_models_collection" target="_blank" rel="noopener">https://github.com/xiaoski/live2d_models_collection</a></p><p>除此之外，还有桌面版本：<br><a href="https://github.com/amorist/platelet" target="_blank" rel="noopener">https://github.com/amorist/platelet</a><br><a href="https://github.com/akiroz/Live2D-Widget" target="_blank" rel="noopener">https://github.com/akiroz/Live2D-Widget</a></p><p>另外，点击看板娘的纸飞机按钮，会出现一个彩蛋，这来自于<a href="http://www.websiteasteroids.com" target="_blank" rel="noopener">WebsiteAsteroids</a>。</p><h2 id="更多-More"><a href="#更多-More" class="headerlink" title="更多 More"></a>更多 More</h2><p>Live2D官方网站：<br><a href="https://www.live2d.com/en/" target="_blank" rel="noopener">https://www.live2d.com/en/</a><br><a href="https://live2d.github.io" target="_blank" rel="noopener">https://live2d.github.io</a></p><p>可以在官方网站下载、打包SDK，以获取更多的功能。具体操作是：</p><ul><li>点击Cubism SDK for Web，下载相关文件；</li><li>解压并进入目录，执行<code>npm install</code>；</li><li>执行<code>npm run build-sample</code>。</li></ul><h2 id="许可证-License"><a href="#许可证-License" class="headerlink" title="许可证 License"></a>许可证 License</h2><p>Released under the GNU General Public License v3<br><a href="http://www.gnu.org/licenses/gpl-3.0.html" target="_blank" rel="noopener">http://www.gnu.org/licenses/gpl-3.0.html</a></p><h2 id="更新-Update"><a href="#更新-Update" class="headerlink" title="更新 Update"></a>更新 Update</h2><p>2018年10月31日，由fghrsh提供的原API停用，请更新至新地址。参考文章：<br><a href="https://www.fghrsh.net/post/170.html" target="_blank" rel="noopener">https://www.fghrsh.net/post/170.html</a></p></div></div></div></div><div class="comments" id="comments"></div></div><div class="sidebar-toggle"><div class="sidebar-toggle-line-wrap"><span class="sidebar-toggle-line sidebar-toggle-line-first"></span><span class="sidebar-toggle-line sidebar-toggle-line-middle"></span><span class="sidebar-toggle-line sidebar-toggle-line-last"></span></div></div><aside id="sidebar" class="sidebar"><div class="sidebar-inner"><ul class="sidebar-nav motion-element"><li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap"> 文章目录</li><li class="sidebar-nav-overview" data-target="site-overview-wrap"> 站点概览</li></ul><section class="site-overview-wrap sidebar-panel"><div class="site-overview"><div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person"> <img class="site-author-image" itemprop="image" src="/images/author.jpg" alt="Cobra"><p class="site-author-name" itemprop="name">Cobra</p><p class="site-description motion-element" itemprop="description">最重要的事情是确定自己真的是在往前走。别敷衍自己！</p></div><nav class="site-state motion-element"><div class="site-state-item site-state-posts"> <a href="/archive"><span class="site-state-item-count">2</span> <span class="site-state-item-name">日志</span></a></div><div class="site-state-item site-state-categories"> <a href="/categories/index.html"><span class="site-state-item-count">1</span> <span class="site-state-item-name">分类</span></a></div><div class="site-state-item site-state-tags"> <a href="/tags/index.html"><span class="site-state-item-count">2</span> <span class="site-state-item-name">标签</span></a></div></nav><div class="links-of-author motion-element"><span class="links-of-author-item"><a href="https://github.com/Cobracc" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i> GitHub</a></span><span class="links-of-author-item"><a href="http://www.zhihu.com/people/cobrap" target="_blank" title="知乎"><i class="fa fa-fw fa-crosshairs"></i> 知乎</a></span></div></div></section><section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active"><div class="post-toc"><div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Live2D-Widget"><span class="nav-number">1.</span> <span class="nav-text">Live2D Widget</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#特性-Feature"><span class="nav-number">1.1.</span> <span class="nav-text">特性 Feature</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例-Demo"><span class="nav-number">1.2.</span> <span class="nav-text">示例 Demo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#依赖-Dependencies"><span class="nav-number">1.3.</span> <span class="nav-text">依赖 Dependencies</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-Usage"><span class="nav-number">1.4.</span> <span class="nav-text">使用 Usage</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-CDN"><span class="nav-number">1.4.1.</span> <span class="nav-text">Using CDN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Self-host"><span class="nav-number">1.4.2.</span> <span class="nav-text">Self-host</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目录结构-Files"><span class="nav-number">1.5.</span> <span class="nav-text">目录结构 Files</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#鸣谢-Credits"><span class="nav-number">1.6.</span> <span class="nav-text">鸣谢 Credits</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更多-More"><span class="nav-number">1.7.</span> <span class="nav-text">更多 More</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#许可证-License"><span class="nav-number">1.8.</span> <span class="nav-text">许可证 License</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更新-Update"><span class="nav-number">1.9.</span> <span class="nav-text">更新 Update</span></a></li></ol></li></ol></div></div></section><div class="back-to-top"><i class="fa fa-arrow-up"></i> <span id="scrollpercent"><span>0</span>%</span></div></div></aside></div></main><footer id="footer" class="footer"><div class="footer-inner"><div class="copyright">&copy; <span itemprop="copyrightYear">2019</span><span class="with-love" id="heart"><i class="fa fa-heart"></i></span> <span class="author" itemprop="copyrightHolder">Cobra</span></div><div class="busuanzi-count"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div class="powered-by"></div><span class="site-uv"><i class="fa fa-eye"></i> 访问次数:<span class="busuanzi-value" id="busuanzi_value_site_uv"></span> 次</span><span class="site-pv"><i class="fa fa-pencil"></i> 博客全站共:<span class="post-count">327</span> 字</span></div> <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span><script>var now=new Date;function createtime(){var n=new Date("9/1/2019 00:00:00");now.setTime(now.getTime()+250),days=(now-n)/1e3/60/60/24,dnum=Math.floor(days),hours=(now-n)/1e3/60/60-24*dnum,hnum=Math.floor(hours),1==String(hnum).length&&(hnum="0"+hnum),minutes=(now-n)/1e3/60-1440*dnum-60*hnum,mnum=Math.floor(minutes),1==String(mnum).length&&(mnum="0"+mnum),seconds=(now-n)/1e3-86400*dnum-3600*hnum-60*mnum,snum=Math.round(seconds),1==String(snum).length&&(snum="0"+snum),document.getElementById("timeDate").innerHTML="Run for "+dnum+" Days ",document.getElementById("times").innerHTML=hnum+" Hours "+mnum+" m "+snum+" s"}setInterval("createtime()",250)</script></div></footer></div><script type="text/javascript">"[object Function]"!==Object.prototype.toString.call(window.Promise)&&(window.Promise=null)</script><script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script><script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script><script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script><script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script><script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script type="text/javascript">
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Live2D Widget特性 Feature在网页中添加Live2D看板娘。与PJAX兼容，支持无刷新加载。Add Live2D widget to web page. Compatible with PJAX. 警告：不支持IE。WARNING: DO NOT SUPPORT IE. 示例 Demo在米米的博客的左下角可查看效果。需要使用支持WebGL的现代浏览器浏览。  这个仓库中也提供了两">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cobraの博客">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;live2d-widget-master&#x2F;README.html">
+<meta property="og:site_name" content="Cobraの博客">
+<meta property="og:description" content="Live2D Widget特性 Feature在网页中添加Live2D看板娘。与PJAX兼容，支持无刷新加载。Add Live2D widget to web page. Compatible with PJAX. 警告：不支持IE。WARNING: DO NOT SUPPORT IE. 示例 Demo在米米的博客的左下角可查看效果。需要使用支持WebGL的现代浏览器浏览。  这个仓库中也提供了两">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;live2d-widget-master&#x2F;README.htm&#x2F;screenshot-1.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;live2d-widget-master&#x2F;README.htm&#x2F;screenshot-2.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;live2d-widget-master&#x2F;README.htm&#x2F;screenshot-3.png">
+<meta property="og:updated_time" content="2019-11-12T09:27:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;live2d-widget-master&#x2F;README.htm&#x2F;screenshot-1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/live2d-widget-master/README.html"/>
+
+
+
+
+
+  <title> | Cobraの博客</title>
+  
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+<!-- 代码块复制功能 -->
+<script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+<script type="text/javascript" src="/js/src/clipboard-use.js"></script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+<script src="https://cobracc.github.io/live2d/autoload.js"></script>
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Cobraの博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">记录生活</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archive">
+          <a href="/archive" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-photos">
+          <a href="/photos" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-image"></i> <br />
+            
+            相册
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
+
+	<h1 class="post-title" itemprop="name headline"></h1>
+
+
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+        
+        
+          <h1 id="Live2D-Widget"><a href="#Live2D-Widget" class="headerlink" title="Live2D Widget"></a>Live2D Widget</h1><h2 id="特性-Feature"><a href="#特性-Feature" class="headerlink" title="特性 Feature"></a>特性 Feature</h2><p>在网页中添加Live2D看板娘。与PJAX兼容，支持无刷新加载。<br>Add Live2D widget to web page. Compatible with PJAX.</p>
+<p><strong>警告：不支持IE。</strong><br><strong>WARNING: DO NOT SUPPORT IE.</strong></p>
+<h2 id="示例-Demo"><a href="#示例-Demo" class="headerlink" title="示例 Demo"></a>示例 Demo</h2><p>在<a href="https://zhangshuqiao.org" target="_blank" rel="noopener">米米的博客</a>的左下角可查看效果。需要使用支持WebGL的现代浏览器浏览。</p>
+<p><img src="/live2d-widget-master/README.htm/screenshot-1.png" alt><br><img src="/live2d-widget-master/README.htm/screenshot-2.png" alt><br><img src="/live2d-widget-master/README.htm/screenshot-3.png" alt></p>
+<p>这个仓库中也提供了两个Demo，即</p>
+<ul>
+<li><a href="https://mi.js.org/live2d-widget/demo/demo1.html" target="_blank" rel="noopener">demo1.html</a> ，展现基础效果</li>
+<li><a href="https://mi.js.org/live2d-widget/demo/demo2.html" target="_blank" rel="noopener">demo2.html</a> ，仿NPM的登陆界面</li>
+</ul>
+<h2 id="依赖-Dependencies"><a href="#依赖-Dependencies" class="headerlink" title="依赖 Dependencies"></a>依赖 Dependencies</h2><p>本插件需要jQuery和font-awesome支持，请确保它们已在页面中加载，例如在<code>&lt;head&gt;</code>中加入：<br>jQuery and font-awesome is required for this plugin. You can add this to <code>&lt;head&gt;</code>:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>否则无法正常显示。（如果你的网页已经加载了jQuery，就不要重复加载了）</p>
+<h2 id="使用-Usage"><a href="#使用-Usage" class="headerlink" title="使用 Usage"></a>使用 Usage</h2><p>你可以直接这样使用：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>将这一行代码加入<code>&lt;head&gt;</code>或<code>&lt;body&gt;</code>，即可看到效果。如果你的网站启用了PJAX，由于看板娘不必每页刷新，因此需要注意将相关脚本放到PJAX刷新区域之外。</p>
+<p>换句话说，如果你是小白，或者只需要最基础的功能，就只需要：</p>
+<ul>
+<li>把这一行代码，连同前面的两行代码，一起放到html的<code>&lt;head&gt;</code>中即可；</li>
+<li>如果页面是用各种模版引擎、php、asp生成的，也要自行修改，方法类似，只是可能略为麻烦。</li>
+</ul>
+<p><strong>但是！我们强烈推荐自己进行配置，否则很多功能是不完整的，并且可能产生问题！</strong><br>如果你有兴趣自己折腾的话，请看下面的详细说明。</p>
+<h3 id="Using-CDN"><a href="#Using-CDN" class="headerlink" title="Using CDN"></a>Using CDN</h3><p>如果要自定义有关内容，可以把这个仓库Fork一份，然后进行修改。这时，使用方法对应地变为</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.jsdelivr.net/gh/username/live2d-widget/autoload.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>将<code>username</code>替换为你的GitHub用户名即可。</p>
+<h3 id="Self-host"><a href="#Self-host" class="headerlink" title="Self-host"></a>Self-host</h3><p>你也可以直接把这些文件放到服务器上，而不是通过CDN加载。</p>
+<ul>
+<li>如果你可以通过ssh访问你的主机，请把整个项目克隆到服务器上。执行：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /path/to/your/webroot</span><br><span class="line"><span class="comment"># Clone this repository</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/stevenjoezhang/live2d-widget.git</span><br></pre></td></tr></table></figure></li>
+<li>如果你的主机无法用ssh连接（例如一般的虚拟主机），请选择<code>Download ZIP</code>，然后通过ftp上传到主机上，再解压到网站的目录下。</li>
+<li>如果你是通过Hexo等工具部署的静态博客，请选择<code>Download ZIP</code>，然后解压到本地的博客目录下，例如<code>source</code>下与<code>_posts</code>同级的目录。重新部署博客时，相关文件就会自动上传到对应的目录。（还需要在Hexo主题相关的swig或ejs模版中正确配置路径，才可以加载）</li>
+</ul>
+<p>这样，整个项目就可以通过你的服务器IP或者域名从公网访问了。你可以试试能否正常地通过浏览器打开<code>autoload.js</code>和<code>live2d.min.js</code>等文件。<strong>（最好还要确定一下这些文件的内容是正确的，有时由于字符集的问题，文件中可能出现乱码；此时需要重新下载）</strong><br>如果没有问题，接下来需要修改一些配置。（需要通过服务器上的<code>vim</code>，<code>emacs</code>，cPanel文件管理器等工具修改；你也可以先在本地完成这一步骤，再上传到服务器上）<br>修改<code>autoload.js</code>中的参数<code>live2d_path</code>为<code>live2d-widget</code>这一文件夹在公网上的路径。比如说，如果你可以通过</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http<span class="variable">s:</span>//www.example.<span class="keyword">com</span>/path/<span class="keyword">to</span>/live2d-widget/live2d.<span class="built_in">min</span>.js</span><br></pre></td></tr></table></figure>
+<p>访问到<code>live2d.min.js</code>，那么就把<code>live2d_path</code>的值修改为</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="regexp">//</span>www.example.com<span class="regexp">/path/</span>to<span class="regexp">/live2d-widget/</span></span><br></pre></td></tr></table></figure>
+<p>路径末尾的<code>/</code>一定要加上。具体可以参考<code>autoload.js</code>内的注释。<br>完成后，在你要添加看板娘的界面加入</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://www.example.com/path/to/live2d-widget/autoload.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>就可以加载了。</p>
+<h2 id="目录结构-Files"><a href="#目录结构-Files" class="headerlink" title="目录结构 Files"></a>目录结构 Files</h2><ul>
+<li><code>waifu-tips.json</code>中包含了触发条件（<code>selector</code>，选择器）和触发时显示的文字（<code>text</code>）；</li>
+<li><code>waifu.css</code>是看板娘的样式表。</li>
+</ul>
+<p>源文件是对Hexo的NexT主题有效的，为了适用于你自己的网页，可能需要自行修改，或增加新内容。<br><strong>警告：作者不对包括但不限于<code>waifu-tips.json</code>和<code>waifu-tips.js</code>文件中的内容负责，请自行确保它们是合适的。</strong></p>
+<p>如果有任何疑问，欢迎提Issue。如果有任何修改建议，欢迎提PR。</p>
+<h2 id="鸣谢-Credits"><a href="#鸣谢-Credits" class="headerlink" title="鸣谢 Credits"></a>鸣谢 Credits</h2><p>代码自这篇博文魔改而来：<br><a href="https://www.fghrsh.net/post/123.html" target="_blank" rel="noopener">https://www.fghrsh.net/post/123.html</a><br>相比初始的版本，这个仓库增加了一些功能，并优化了提示展现机制。</p>
+<p>更多内容可以参考：<br><a href="https://zhangshuqiao.org/2018-07/在网页中添加Live2D看板娘/" target="_blank" rel="noopener">https://zhangshuqiao.org/2018-07/在网页中添加Live2D看板娘/</a><br><a href="https://imjad.cn/archives/lab/add-dynamic-poster-girl-with-live2d-to-your-blog-02" target="_blank" rel="noopener">https://imjad.cn/archives/lab/add-dynamic-poster-girl-with-live2d-to-your-blog-02</a><br><a href="https://github.com/summerscar/live2dDemo" target="_blank" rel="noopener">https://github.com/summerscar/live2dDemo</a></p>
+<p>还可以自行搭建后端api，并增加模型（需要修改的内容比较多，此处不再赘述）：<br><a href="https://github.com/fghrsh/live2d_api" target="_blank" rel="noopener">https://github.com/fghrsh/live2d_api</a><br><a href="https://github.com/xiazeyu/live2d-widget-models" target="_blank" rel="noopener">https://github.com/xiazeyu/live2d-widget-models</a><br><a href="https://github.com/xiaoski/live2d_models_collection" target="_blank" rel="noopener">https://github.com/xiaoski/live2d_models_collection</a></p>
+<p>除此之外，还有桌面版本：<br><a href="https://github.com/amorist/platelet" target="_blank" rel="noopener">https://github.com/amorist/platelet</a><br><a href="https://github.com/akiroz/Live2D-Widget" target="_blank" rel="noopener">https://github.com/akiroz/Live2D-Widget</a></p>
+<p>另外，点击看板娘的纸飞机按钮，会出现一个彩蛋，这来自于<a href="http://www.websiteasteroids.com" target="_blank" rel="noopener">WebsiteAsteroids</a>。</p>
+<h2 id="更多-More"><a href="#更多-More" class="headerlink" title="更多 More"></a>更多 More</h2><p>Live2D官方网站：<br><a href="https://www.live2d.com/en/" target="_blank" rel="noopener">https://www.live2d.com/en/</a><br><a href="https://live2d.github.io" target="_blank" rel="noopener">https://live2d.github.io</a></p>
+<p>可以在官方网站下载、打包SDK，以获取更多的功能。具体操作是：</p>
+<ul>
+<li>点击Cubism SDK for Web，下载相关文件；</li>
+<li>解压并进入目录，执行<code>npm install</code>；</li>
+<li>执行<code>npm run build-sample</code>。</li>
+</ul>
+<h2 id="许可证-License"><a href="#许可证-License" class="headerlink" title="许可证 License"></a>许可证 License</h2><p>Released under the GNU General Public License v3<br><a href="http://www.gnu.org/licenses/gpl-3.0.html" target="_blank" rel="noopener">http://www.gnu.org/licenses/gpl-3.0.html</a></p>
+<h2 id="更新-Update"><a href="#更新-Update" class="headerlink" title="更新 Update"></a>更新 Update</h2><p>2018年10月31日，由fghrsh提供的原API停用，请更新至新地址。参考文章：<br><a href="https://www.fghrsh.net/post/170.html" target="_blank" rel="noopener">https://www.fghrsh.net/post/170.html</a></p>
+
+        
+      </div>
+      
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/author.jpg"
+                alt="Cobra" />
+            
+              <p class="site-author-name" itemprop="name">Cobra</p>
+              <p class="site-description motion-element" itemprop="description">最重要的事情是确定自己真的是在往前走。别敷衍自己！</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archive">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Cobracc" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.zhihu.com/people/cobrap" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-crosshairs"></i>知乎</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Live2D-Widget"><span class="nav-number">1.</span> <span class="nav-text">Live2D Widget</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#特性-Feature"><span class="nav-number">1.1.</span> <span class="nav-text">特性 Feature</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例-Demo"><span class="nav-number">1.2.</span> <span class="nav-text">示例 Demo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#依赖-Dependencies"><span class="nav-number">1.3.</span> <span class="nav-text">依赖 Dependencies</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-Usage"><span class="nav-number">1.4.</span> <span class="nav-text">使用 Usage</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-CDN"><span class="nav-number">1.4.1.</span> <span class="nav-text">Using CDN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Self-host"><span class="nav-number">1.4.2.</span> <span class="nav-text">Self-host</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目录结构-Files"><span class="nav-number">1.5.</span> <span class="nav-text">目录结构 Files</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#鸣谢-Credits"><span class="nav-number">1.6.</span> <span class="nav-text">鸣谢 Credits</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更多-More"><span class="nav-number">1.7.</span> <span class="nav-text">更多 More</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#许可证-License"><span class="nav-number">1.8.</span> <span class="nav-text">许可证 License</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更新-Update"><span class="nav-number">1.9.</span> <span class="nav-text">更新 Update</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="heart">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Cobra</span>
+
+</div>
+
+
+<!-- 新增访客统计代码 -->
+<div class="busuanzi-count">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <div class="powered-by"></div>
+    <span class="site-uv">
+      <i class="fa fa-eye"></i>
+      访问次数:<span class="busuanzi-value" id="busuanzi_value_site_uv"></span> 次
+    </span>
+    <!-- 博客字数统计 -->
+    <span class="site-pv">
+      <i class="fa fa-pencil"></i>
+      博客全站共:<span class="post-count">400</span> 字
+    </span>
+</div>
+<!-- 新增访客统计代码 END-->
+<!-- 在网页底部添加网站运行时间 -->
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("9/1/2019 00:00:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "Run for "+dnum+" Days ";
+        document.getElementById("times").innerHTML = hnum + " Hours " + mnum + " m " + snum + " s";
+    }
+setInterval("createtime()",250);
+</script>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
     var GUEST = ['nick','mail','link'];
     var guest = 'nick';
     guest = guest.split(',').filter(item=>{
@@ -15,7 +761,13 @@
         guest_info:guest,
         pageSize:'10' || 10,
     });
-  </script><script type="text/javascript">
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
     // Popup Window;
     var isfetched = false;
     var isXml = true;
@@ -330,4 +1082,31 @@
         onPopupClose();
       }
     });
-  </script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({pluginRootPath:"live2dw/",pluginJsPath:"lib/",pluginModelPath:"assets/",tagMode:!1,debug:!1,model:{jsonPath:"/live2dw/assets/wanko.model.json"},display:{position:"left",width:150,height:300},mobile:{show:!0},log:!1})</script></body></html><script type="text/javascript" src="/js/src/clicklove.js"></script><script type="text/javascript" src="https://unpkg.com/minigrid@3.1.1/dist/minigrid.min.js"></script><link rel="stylesheet" href="/photos/photos.css"><script type="text/javascript" src="/photos/photo.js"></script>
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
+<script type="text/javascript" src="https://unpkg.com/minigrid@3.1.1/dist/minigrid.min.js"></script>
+<link rel="stylesheet" href="/photos/photos.css">
+<script type="text/javascript" src="/photos/photo.js"></script>
