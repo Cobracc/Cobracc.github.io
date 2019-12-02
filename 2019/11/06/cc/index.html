@@ -100,7 +100,7 @@
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;cc&#x2F;1.jpg">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;cc&#x2F;3.jpg">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;cc&#x2F;4.jpg">
-<meta property="og:updated_time" content="2019-11-29T07:19:25.624Z">
+<meta property="og:updated_time" content="2019-12-02T09:18:44.582Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;cc&#x2F;2.jpg">
 
@@ -150,9 +150,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
-<!-- 代码块复制功能 -->
-<script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
-<script type="text/javascript" src="/js/src/clipboard-use.js"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -162,6 +159,7 @@
     
   
 <script src="https://cobracc.github.io/live2d/autoload.js"></script>
+
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
@@ -419,7 +417,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  323字
+                  250字
                 </span>
               
 
@@ -452,8 +450,6 @@
 <p>这个问题我就一直无法解决，那个作者给出的解决办法就是加个时间戳或者重启</p>
 <p><img src="/2019/11/06/cc/3.jpg" alt></p>
 <p>我试了很多次，还是报错，我的代码就此停止了下来，不知道去写啥了，其他的功能也都写的差不多了，唯独这个登录注册的缓存问题一直卡住，很难受。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*页面载入完成后，创建复制按钮*/</span></span><br><span class="line">!<span class="function"><span class="keyword">function</span> (<span class="params">e, t, a</span>) </span>&#123; </span><br><span class="line">  <span class="comment">/* code */</span></span><br><span class="line">  <span class="keyword">var</span> initCopyCode = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> copyHtml = <span class="string">''</span>;</span><br><span class="line">    copyHtml += <span class="string">'&lt;button class="btn-copy" data-clipboard-snippet=""&gt;'</span>;</span><br><span class="line">    copyHtml += <span class="string">'&lt;span&gt;复制&lt;/span&gt;'</span>;</span><br><span class="line">    copyHtml += <span class="string">'&lt;/button&gt;'</span>;</span><br><span class="line">    $(<span class="string">".highlight .code pre"</span>).before(copyHtml);</span><br><span class="line">    <span class="keyword">new</span> ClipboardJS(<span class="string">'.btn-copy'</span>, &#123;</span><br><span class="line">        target: <span class="function"><span class="keyword">function</span>(<span class="params">trigger</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> trigger.nextElementSibling;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  initCopyCode();</span><br><span class="line">&#125;(<span class="built_in">window</span>, <span class="built_in">document</span>);</span><br></pre></td></tr></table></figure>
-
 <img src="/2019/11/06/cc/4.jpg" style="zoom: 35%;">
 
 
@@ -684,7 +680,7 @@
     <!-- 博客字数统计 -->
     <span class="site-pv">
       <i class="fa fa-pencil"></i>
-      博客全站共:<span class="post-count">400</span> 字
+      博客全站共:<span class="post-count">327</span> 字
     </span>
 </div>
 <!-- 新增访客统计代码 END-->
@@ -725,6 +721,9 @@ setInterval("createtime()",250);
     
 
   </div>
+  <!-- 代码块复制功能 -->
+<script type="text/javascript" src="/js/src/clipboard.js"></script>  
+<script type="text/javascript" src="/js/src/clipboard-use.js"></script>
 
   
 
@@ -794,7 +793,7 @@ setInterval("createtime()",250);
   <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
 
 
-
+  
   
   
 
