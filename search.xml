@@ -1,45 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>登录注册缓存问题</title>
-    <url>/2019/11/06/cc/</url>
-    <content><![CDATA[<p>这几天一直被网上的网易云音乐的<a href="https://binaryify.github.io/NeteaseCloudMusicApi/#/" target="_blank" rel="noopener">API接口</a>提供的登录注册接口所困扰，这个API接口确实不错，作者很用心而且这个不仅可以自己做本地接口还可以连接作者自己的在线接口。我的问题是我可以去请求接口然后返回数据，都可以得到我的登录的账号的数据，并且保存在本地localStorage </p>
-<img src="/2019/11/06/cc/2.jpg">
-
-<p>然后依据缓存的的账号去请求一些需要登录的接口数据，这个时候就会返回一个301的错误代码</p>
-<p><img src="/2019/11/06/cc/1.jpg" alt></p>
-<p>这个问题我就一直无法解决，那个作者给出的解决办法就是加个时间戳或者重启</p>
-<p><img src="/2019/11/06/cc/3.jpg" alt></p>
-<p>我试了很多次，还是报错，我的代码就此停止了下来，不知道去写啥了，其他的功能也都写的差不多了，唯独这个登录注册的缓存问题一直卡住，很难受。</p>
-<img src="/2019/11/06/cc/4.jpg" style="zoom: 35%;">
-
-]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>登录注册缓存问题</title>
+      <link href="/2019/11/06/cc/"/>
+      <url>/2019/11/06/cc/</url>
+      
+        <content type="html"><![CDATA[<p>这几天一直被网上的网易云音乐的<a href="https://binaryify.github.io/NeteaseCloudMusicApi/#/" target="_blank" rel="noopener">API接口</a>提供的登录注册接口所困扰，这个API接口确实不错，作者很用心而且这个不仅可以自己做本地接口还可以连接作者自己的在线接口。我的问题是我可以去请求接口然后返回数据，都可以得到我的登录的账号的数据，并且保存在本地localStorage </p><img src="/2019/11/06/cc/2.jpg"><p>然后依据缓存的的账号去请求一些需要登录的接口数据，这个时候就会返回一个301的错误代码</p><p><img src="/2019/11/06/cc/1.jpg" alt></p><p>这个问题我就一直无法解决，那个作者给出的解决办法就是加个时间戳或者重启</p><p><img src="/2019/11/06/cc/3.jpg" alt></p><p>我试了很多次，还是报错，我的代码就此停止了下来，不知道去写啥了，其他的功能也都写的差不多了，唯独这个登录注册的缓存问题一直卡住，很难受。</p><img src="/2019/11/06/cc/4.jpg" style="zoom: 35%;">]]></content>
+      
+      
       <categories>
-        <category>Vue</category>
+          
+          <category> Vue </category>
+          
       </categories>
-      <tags>
-        <tag>网易云音乐</tag>
-        <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2019/11/01/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--more--&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> 网易云音乐 </tag>
+            
+            <tag> Vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2019/11/01/hello-world/"/>
+      <url>/2019/11/01/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--more--&gt;</span></span><br></pre></td></tr></table></figure><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
 </search>
